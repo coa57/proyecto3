@@ -1,0 +1,15 @@
+export type RoomStatus = "Disponible" | "Ocupada" | "Mantenimiento";
+export type ReservationStatus = "Activa" | "Finalizada" | "Cancelada";
+export type PaymentMethod = "Tarjeta" | "Transferencia" | "Efectivo";
+
+export interface Room {
+  id: string; number: string; type: string; floor: number; capacity: number; price: number;
+  status: RoomStatus; garage: boolean; image: string; description: string; amenities: string[];
+}
+export interface ExtraService { id: string; name: string; icon: string; description: string; price: number; active: boolean; }
+export interface Reservation {
+  id: string; userId: string; guestName: string; roomId: string; checkIn: string; checkOut: string;
+  nights: number; serviceIds: string[]; garage: boolean; total: number; status: ReservationStatus;
+  createdAt: string; paymentStatus: "Pendiente" | "Pagado"; paymentMethod?: PaymentMethod;
+}
+export interface Review { id: string; userId: string; name: string; rating: number; comment: string; date: string; visible: boolean; }
