@@ -6,6 +6,9 @@ export interface User {
   name: string;
   carnet: string;
   role: UserRole;
+  paternalSurname?: string;
+  maternalSurname?: string;
+  active?: boolean;
 }
 
 
@@ -18,3 +21,5 @@ export interface LoginCredentials {
   carnet: string;
   password: string;
 }
+
+export interface RegisterCredentials { name: string; paternalSurname: string; maternalSurname: string; carnet: string; password: string; }
