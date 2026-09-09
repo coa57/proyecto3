@@ -1,4 +1,4 @@
-import type { ExtraService, Review, Room } from "../types/hospitality";
+import type { ExtraService, Room } from "../types/hospitality";
 
 export const rooms: Room[] = [
   { id: "room-101", number: "101", type: "Doble Deluxe", floor: 1, capacity: 2, price: 280, status: "Disponible", garage: true, image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=85", description: "Una habitación luminosa y serena, diseñada para descansar con comodidad y estilo.", amenities: ["Cama Queen", "WiFi de alta velocidad", "Desayuno", "Baño privado"] },
@@ -12,9 +12,4 @@ export const services: ExtraService[] = [
   { id: "cleaning", name: "Limpieza extra", icon: "✧", description: "Servicio de limpieza adicional a solicitud.", price: 35, active: true },
   { id: "wellness", name: "Bienestar", icon: "◌", description: "Acceso a la zona de relajación y masajes.", price: 95, active: true },
   { id: "wifi", name: "WiFi Premium", icon: "⌁", description: "Conexión de alta velocidad para todos tus dispositivos.", price: 20, active: true },
-];
-export const reviews: Review[] = [
-  { id: "review-1", userId: "guest", name: "María Fernanda", rating: 5, comment: "Una atención impecable, habitación hermosa y un descanso total.", date: "12 ago. 2026", visible: true },
-  { id: "review-2", userId: "guest", name: "Carlos R.", rating: 5, comment: "El lugar perfecto para una visita de trabajo. Todo muy cuidado.", date: "04 ago. 2026", visible: true },
-  { id: "review-3", userId: "guest", name: "Andrea López", rating: 4, comment: "Muy cómodo, tranquilo y con un desayuno delicioso.", date: "28 jul. 2026", visible: true },
 ];
